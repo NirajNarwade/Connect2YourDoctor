@@ -5,7 +5,7 @@ function Login(){
     const [data,setData] = useState({
         username:"",
         password:"",
-        loginerror:""
+//         loginerror:""
     });
 
 
@@ -44,6 +44,7 @@ function Login(){
         .then(resp=>resp.text())
         .then(data=> {if(data.length != 0)
             {
+                // setData({loginerror:""})
                 const json = JSON.parse(data);
                 if(json.login_id.user_type == "Patient"){
                     sessionStorage.setItem("patient",JSON.stringify(json))
@@ -61,7 +62,10 @@ function Login(){
                 }
             }
             else{
-            setData({loginerror:"Wrong Username or Password! Try Again..."})
+//             setData({loginerror:"Wrong Username or Password! Try Again..."})
+                 //setData({loginerror:"Wrong Username or Password! Try Again..."})
+            alert("Wrong Username or Password! Try Again...")
+            // window.location.reload();
             }
         })
 
