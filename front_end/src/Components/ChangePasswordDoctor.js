@@ -41,7 +41,7 @@ function ChangePasswordDoctor(){
         {
             setData({passerror : "Current password and new password are same.. Please enter new password"})
         }
-        else if(data.newpass === data.confirmpass){
+        else if(data.newpass === data.confirmpass && data.newpass !== ""){
             setData({passerror : ""})
             if(login.password === data.currentpass){
                 const reqOptions ={
