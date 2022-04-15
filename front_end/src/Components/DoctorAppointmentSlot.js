@@ -128,7 +128,7 @@ const maxDate=()=>{
 
     }
     const logout=()=>{
-        sessionStorage.removeItem("doctor");
+        sessionStorage.removeItem("patient");
         navigate("/");
     }
 
@@ -136,7 +136,7 @@ const maxDate=()=>{
     return(
         <div className="container-fluid" style={{marginBottom : "50px"}}>
           <button className="btn btn-danger" onClick={logout} style={{float:"right",marginTop:"10px",marginRight:"10px"}}>Logout</button>
-        <button  className='btn btn-secondary' style={{float:"right",marginTop:"10px",marginRight:"10px"}} onClick={() => navigate("/doctor")}>Go Back</button> 
+        <button  className='btn btn-secondary' style={{float:"right",marginTop:"10px",marginRight:"10px"}} onClick={() => navigate("/patient")}>Go Back</button> 
     <br/><br/>
             <h2 className="font-weight-bold offset-4">Select Day</h2>
             <label><b>Select a Date :</b></label>
@@ -148,8 +148,8 @@ const maxDate=()=>{
                
                 <p className="text text-danger offset-4"><b>{empty}</b></p>
                 
-            <Table striped bordered hover variant="dark" >
-            <thead >
+           <Table className="table table-bordered" >
+            <thead className="bg-dark text-light">
                  <tr>
                     <th>Slot</th>
                     <th>Action</th>
