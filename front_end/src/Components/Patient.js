@@ -35,7 +35,7 @@ function Patient(){
             </div>
 
         </div> */}
-        <div className="container" style={{marginBottom : "50px"}}>
+                <div className="container" style={{marginBottom : "50px"}}>
                 <div className="row my-3">
                     <div className="col-sm-6"><h2 className="">Hello, {state.firstName} {state.lastName}</h2></div>
                     <div className="col-sm-6">
@@ -83,6 +83,7 @@ function Patient(){
                             </div>
                         </div>
                     </div>
+                </div>   
                     <div className="row my-3">
                         <div className="col-sm-6">
                             <div className="card">
@@ -105,18 +106,18 @@ function Patient(){
                         </div>
                     </div>
 
-                    <div className="row my-3">
-                            <div className="col-sm-6">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <h5 className="card-title">Change Password</h5>
-                                        <p className="card-text">Change your password.</p>
-                                        <button onClick={() => navigate("/changepasswordpatient")} className="btn btn-success">CHANGE</button>
-                                    </div>
-                                </div>
+                <div className="row my-3">
+                    <div className="col-sm-6">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">Change Password</h5>
+                                <p className="card-text">Change your password.</p>
+                                <button onClick={() => navigate("/changepasswordpatient")} className="btn btn-success">CHANGE</button>
                             </div>
                         </div>
+                    </div>
                 </div>
+                
             </div></>
     );
 }
