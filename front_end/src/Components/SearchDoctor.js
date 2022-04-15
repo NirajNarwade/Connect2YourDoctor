@@ -161,6 +161,9 @@ function SearchDoctor(){
                 <button type="button" className="btn btn-danger" style={{ marginLeft: "10px", marginTop: "10px" }} onClick={refreshPage}>Reset</button>
                 <button className="btn btn-danger" onClick={() => navigate("/patient")} style={{ marginLeft: "10px", marginTop: "10px" }}>Cancel</button>
             </div>
+            <div>
+            <p className="text text-danger"><b>{error}</b></p>  
+            </div>
             {/* <div>
         <div>
         <select style={{ marginLeft: '10px',marginTop:"10px" }} name="areaId" onChange={searchBySpeciality}>
