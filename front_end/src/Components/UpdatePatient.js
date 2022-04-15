@@ -86,7 +86,7 @@ function UpdatePatient(){
 
 
     const logout=()=>{
-        sessionStorage.removeItem("doctor");
+        sessionStorage.removeItem("patient");
         navigate("/");
     }
  
