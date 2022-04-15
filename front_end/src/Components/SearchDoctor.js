@@ -48,7 +48,7 @@ function SearchDoctor(){
     }
 
     const search=(ev)=>{
-
+         setDoctor([]);
         // if(stateId === "" && cityId === "" && areaId === ""){
         //    setError("Please Select State or City or Area");
         // }else if(stateId !== "" && cityId === "" && areaId === ""){
