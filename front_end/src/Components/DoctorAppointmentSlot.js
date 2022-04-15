@@ -38,6 +38,7 @@ function DoctorAppointmentSlot(){
         setDate(e.target.value);
         // console.log("dd-"+mm+"-"+yyyy);
         if(e.target.value === "dd-"+mm+"-"+yyyy){
+		setTimeSlots([])
             setEmpty("Please select valid date!!!")
         }
         else{
