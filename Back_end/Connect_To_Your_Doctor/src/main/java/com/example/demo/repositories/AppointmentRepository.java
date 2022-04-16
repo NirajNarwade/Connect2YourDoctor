@@ -17,13 +17,13 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Intege
 	@Query("select a.appointmentTime from Appointment a where doctor_id= :d and appointmentDate= :date")
 	List<Object> getAppointmentByDidandDate(Doctor d, Date date);
 
-	@Query("select a from Appointment a where doctor_id= :d and status = 'scheduled' and appointmentDate > :date1")
+	@Query("select a from Appointment a where doctor_id= :d and status = 'scheduled' and appointmentDate >= :date1")
 	List<Appointment> getAppointmentByDid(Doctor d, java.util.Date date1);
 	
 	@Query("select a from Appointment a where doctor_id= :d and appointmentDate < :date1")
 	List<Appointment> getAppointmentHistoryByDid(Doctor d, java.util.Date date1);
 
-	@Query("select a from Appointment a where patient_id= :p and status = 'scheduled' and appointmentDate > :date1")
+	@Query("select a from Appointment a where patient_id= :p and status = 'scheduled' and appointmentDate >= :date1")
 	List<Appointment> getAppointmentByPatient(Patient p, java.util.Date date1);
 
 	@Query("select a from Appointment a where patient_id= :p and appointmentDate < :date1")
